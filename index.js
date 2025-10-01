@@ -39,6 +39,9 @@ async function run() {
 
 
     app.get('/productsCount', async(req, res) => {
+      const page = parseInt(req.query.page);
+      const size = parseInt(req.query.size);
+      console.log("paginatiom",page, size);
         const count = await productCollection.estimatedDocumentCount();
         res.send({count});
     })
