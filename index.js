@@ -41,7 +41,8 @@ async function run() {
       res.send({ count });
     });
 
-    // Send a ping to confirm a successful connection
+    // Send a ping to confirm a successful connection;
+    
     await client.db("admin").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
